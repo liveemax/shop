@@ -4,6 +4,7 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCssAssetWebpackPlugin = require('optimize-css-assets-webpack-plugin')
 const CopyPlugin = require("copy-webpack-plugin");
+const TerserWebpackPlugin = require('terser-webpack-plugin')
 const data=require('./src/data.json')
 const {page_meta,nav,breadcrumbs,stock,page_text}=data
 const {h1,title,meta_keywords,meta_description}=page_meta
@@ -23,14 +24,15 @@ const optimization = () => {
 
     if (isProd) {
         config.minimizer = [
-            new OptimizeCssAssetWebpackPlugin()
+            new OptimizeCssAssetWebpackPlugin(),
+            new TerserWebpackPlugin()
         ]
     }
 
     return config
 }
 
-const filename = ext => isDev ? `[name].${ext}` : `[name].[hash].${ext}`
+const filename = ext => isDev ? `static/${ext}/[name].${ext}` : `static/${ext}/[name].[hash].${ext}`
 
 const cssLoaders = extra => {
     const loaders = [
@@ -71,16 +73,15 @@ const plugins = () => {
     return [
         new HTMLWebpackPlugin({
         templateParameters:{'h1': require('./src/data.json')["page_meta"]["h1"]||"TRUCKS"},
-        template: path.resolve(src,'index.html'),
-            minify:
-                {collapseWhitespace: isProd}
+        template: path.resolve(src,'index.pug'),
+        minify:{collapseWhitespace: isProd}
 }
         ),
         new CleanWebpackPlugin(),
         new CopyPlugin([
-                {from: path.resolve(src, 'static'),
-                   to: path.resolve(build, 'static'),
-                    context: path.resolve("src", 'static')
+                {from: path.resolve(src, 'static',"images"),
+                   to: path.resolve(build, 'static',"img"),
+                    context: path.resolve("src", 'static',"images")
                 },
         ]),
         new MiniCssExtractPlugin({
@@ -105,13 +106,13 @@ module.exports = {
         }
     },
     optimization: optimization(),
+    devtool: isDev ? 'source-map': undefined,
     devServer: {
         overlay: true,
         open: true,
         port: 82,
         hot: isDev
     },
-    devtool: isDev ? 'source-map' : '',
     plugins: plugins(),
     module: {
         rules: [
@@ -135,6 +136,12 @@ module.exports = {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: jsLoaders()
+            },
+            {
+                test: /\.(pug|jade)$/,
+                use:[{
+                    loader: 'pug-loader',
+                }]
             }
         ]
     }

@@ -1,0 +1,9 @@
+doctype html
+html
+    head
+        title Свиньи
+        link(rel="stylesheet", href="../build/css/style.min.css")
+    body
+        - var file = require('./data.json')
+        ul
+            li= file["page_meta"]["h1"]
