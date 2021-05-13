@@ -1,8 +1,13 @@
 - var json = require('./data.json')
 - var reserve="truck"
 mixin link(val)
-    a(href=val["href"]).link= val["text"]||reserve
-header
-    nav
-        each val in json["nav"]
-            +link(val)
+    a(href=val["href"]).navbar-item.link= val["text"]||reserve
+nav(role="navigation" aria-label="main navigation").navbar
+    div.navbar
+        div.navbar-burger.activeListener
+            span
+            span
+            span
+        div.navbar-menu
+            each val in json["nav"]
+              +link(val)

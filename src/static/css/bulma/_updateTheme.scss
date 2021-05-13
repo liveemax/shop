@@ -1,0 +1,32 @@
+// Update Bulma's variables
+$family-sans-serif: 'Roboto', sans-serif;
+$background:$default;
+$link-hover:$primary;
+$link-visited:$visited;
+$navbar-item-color:$border;
+$body-background-color: $bg;
+
+// Update some of Bulma's component
+
+//NavBar
+.navbar{
+  position: relative;
+  .navbar-item,.navbar-link{
+    padding: 0.5rem 1rem;
+    height: 100%;
+  }
+  .navbar-menu{
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+  }
+}
+
+
+// Import only what you need from Bulma
+@import "./../../../../node_modules/bulma/sass/utilities/_all.sass";
+@import "./../../../../node_modules/bulma/sass/base/_all.sass";
+@import "./../../../../node_modules/bulma/sass/elements/button.sass";
+@import "./../../../../node_modules/bulma/sass/elements/container.sass";
+@import "./../../../../node_modules/bulma/sass/components/navbar.sass";
