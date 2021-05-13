@@ -8,5 +8,6 @@ html
         title=json["page_meta"]["title"]||reserve
     body
         include pug/navbar.pug
-        include pug/main.pug
-        include pug/footer.pug
+        div.container.is-max-widescreen.main__container
+            include pug/main.pug
+            include pug/footer.pug

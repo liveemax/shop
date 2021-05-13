@@ -9,6 +9,7 @@ $body-background-color: $bg;
 // Update some of Bulma's component
 
 //NavBar
+
 .navbar{
   position: relative;
   .navbar-item,.navbar-link{
@@ -23,10 +24,20 @@ $body-background-color: $bg;
   }
 }
 
+//BreadCrumbs
+.breadcrumb{
+  font-size: 0.75rem!important;
+}
+
+
+
+
 
 // Import only what you need from Bulma
 @import "./../../../../node_modules/bulma/sass/utilities/_all.sass";
 @import "./../../../../node_modules/bulma/sass/base/_all.sass";
 @import "./../../../../node_modules/bulma/sass/elements/button.sass";
 @import "./../../../../node_modules/bulma/sass/elements/container.sass";
+@import "./../../../../node_modules/bulma/sass/elements/box.sass";
+@import "./../../../../node_modules/bulma/sass/components/breadcrumb.sass";
 @import "./../../../../node_modules/bulma/sass/components/navbar.sass";
