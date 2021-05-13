@@ -1,0 +1,6 @@
+- var json = require('./data.json')
+- var reserve="truck"
+include item.pug
+div
+    each val in json["stock"]
+        +item(val)

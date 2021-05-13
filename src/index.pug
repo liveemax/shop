@@ -1,9 +1,12 @@
+- var json = require('./data.json')
+- var reserve="truck"
 doctype html
 html
     head
-        title Свиньи
-        link(rel="stylesheet", href="../build/css/style.min.css")
+        meta(name='keywords' content=json["page_meta"]["meta_keywords"]||reserve)
+        meta(name='description' content=json["page_meta"]["meta_description"]||reserve)
+        title=json["page_meta"]["title"]||reserve
     body
-        - var file = require('./data.json')
-        ul
-            li= file["page_meta"]["h1"]
+        include pug/navbar.pug
+        include pug/main.pug
+        include pug/footer.pug

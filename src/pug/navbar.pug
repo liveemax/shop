@@ -1,0 +1,8 @@
+- var json = require('./data.json')
+- var reserve="truck"
+mixin link(val)
+    a(href=val["href"]).link= val["text"]||reserve
+header
+    nav
+        each val in json["nav"]
+            +link(val)

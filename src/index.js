@@ -1,1 +1,1 @@
-require('./static/css/mystyles.scss');
+require('./static/css/global.scss');

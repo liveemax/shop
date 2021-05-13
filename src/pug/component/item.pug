@@ -1,0 +1,17 @@
+- var reserve="truck"
+include tag
+mixin item(val)
+    a(href=val["href"]||"#").items
+        div
+            div
+                img(src=`./static/img/${val["image"]}` alt="file not found")
+            div
+                div
+                    h3=val["title"]||reserve
+                    span=`${val["price_currency"]||reserve}  ${val["price"]||reserve}`
+            div
+                p='Item Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quis distinctio, officia tenetur a eaque deleniti, impedit accusamus, alias provident sint id odio neque laudantium! Saepe quisquam libero soluta itaque? '
+            div
+                +tag(val["year"]||reserve)
+                +tag(`${val["mileage"]||reserve} ${val["mileage_measure"]||reserve}`)
+                +tag(val["axle_configuration"]||reserve)
