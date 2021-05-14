@@ -1,4 +1,4 @@
-export const addActive=()=>{
+export const addActiveBurger=()=>{
     const menu=document.querySelector('.navbar-menu')
     const burger=document.querySelector('.navbar-burger')
     if(burger.classList.value.match(/(is-active)/))

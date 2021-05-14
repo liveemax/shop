@@ -17,3 +17,35 @@
 .main__header{
   margin-left: 1rem;
 }
+
+//aside
+
+.aside{
+  margin-top: 50px;
+  height: fit-content;
+  div{
+    color:$black;
+  }
+}
+.aside__result{
+  border-bottom: 1px solid $border;
+  padding-bottom: 0.7rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.aside__menu{
+  width: 100%;
+  li{
+    margin: 0.5rem 0!important;
+  }
+}
+.aside__minmax{
+  display: flex;
+  justify-content: space-between;
+  input{
+    width: 40%;
+  }
+}
+.aside__button{
+  color:$white!important;
+}

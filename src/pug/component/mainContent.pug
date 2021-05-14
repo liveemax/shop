@@ -1,16 +1,16 @@
-div
-    aside
+div.columns
+    aside.menu.box.aside.column.is-3
         include aside
-    div
+    div.column
+        include headerTitle.pug
         div
-            div
-                include paginations
-                include sortBy
-            div
-                include items
-            div
-                include paginations
-                include sortBy
-            div
-                include postMain
+            include paginations
+            include sortBy
+        div
+            include items
+        div
+            include paginations
+            include sortBy
+        div
+            include postMain
 

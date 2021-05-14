@@ -1,1 +1,50 @@
-div asside
+mixin param(type)
+    li
+        lable(class=`${type}`)
+            input(type=type)
+        span value 1
+    li
+        lable(class=`${type}`)
+            input(type=type)
+        span value 2
+    li
+        lable(class=`${type}`)
+            input(type=type)
+        span value 3
+    li
+        lable(class=`${type}`)
+            input(type=type)
+        span value 4
+    li
+        lable(class=`${type}`)
+            input(type=type)
+        span value 5
+div.aside__header
+    p.panel-heading.aside__result 26 Results Found
+div.menu
+    div.field.is-grouped.control
+        ul.menu-list.aside__menu
+            li
+                a.is-active Param 1
+                ul
+                    +param("checkbox")
+            li
+                a.is-active Param 2
+                ul
+                    +param("radio")
+            li
+                a.is-active Param 3
+                ul
+                    li.aside__minmax
+                        input(type="text" placeholder="min")
+                        input(type="text" placeholder="max")
+            li
+                a.is-active Param 4
+                ul
+                    li
+                        input(type="text" placeholder="Keyword")
+            a(type="text").button.is-primary.aside__button SEARCH
+
+
+
+
