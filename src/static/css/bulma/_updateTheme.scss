@@ -30,6 +30,9 @@ $body-background-color: $bg;
 }
 
 //Pagination
+.pagination{
+  margin-bottom: 0!important;
+}
 .pagination-list{
   li{
     a{
