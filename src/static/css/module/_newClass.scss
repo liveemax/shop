@@ -58,3 +58,32 @@
   color:$white!important;
   margin-bottom: 1rem;
 }
+
+//Items
+.item__container{
+  position: relative;
+  margin: 0.5rem 0!important;
+  img{
+    height: 170px;
+  }
+}
+.item__header{
+  justify-content: space-between;
+  h3{
+    padding: 0;
+  }
+}
+.item__price{
+  padding: 0;
+}
+.item__tag{
+  position: absolute;
+  bottom: 0;
+  transform: translate(0,-50%);
+}
+//Tag
+.tag{
+  background-color: $disable;
+  margin: 0 0.25rem;
+  color: $white;
+}
