@@ -29,6 +29,15 @@ $body-background-color: $bg;
   font-size: 0.75rem!important;
 }
 
+//Pagination
+.pagination-list{
+  li{
+    a{
+      background-color: $white;
+    }
+  }
+}
+
 
 
 
@@ -41,8 +50,10 @@ $body-background-color: $bg;
 @import "./../../../../node_modules/bulma/sass/elements/box.sass";
 @import "./../../../../node_modules/bulma/sass/elements/other.sass";
 @import "./../../../../node_modules/bulma/sass/form/all.sass";
-@import "./../../../../node_modules/bulma/sass/components/dropdown.sass";
+@import "./../../../../node_modules/bulma/sass/components/pagination.sass";
+@import "./../../../../node_modules/bulma/sass/elements/icon.sass";
 @import "./../../../../node_modules/bulma/sass/components/menu.sass";
+@import "./../../../../node_modules/bulma/sass/components/dropdown.sass";
 @import "./../../../../node_modules/bulma/sass/components/breadcrumb.sass";
 @import "./../../../../node_modules/bulma/sass/components/navbar.sass";
 @import "./../../../../node_modules/bulma/sass/grid/columns.sass";

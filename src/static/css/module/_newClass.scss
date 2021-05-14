@@ -17,6 +17,14 @@
 .main__header{
   margin-left: 1rem;
 }
+.main__title{
+  margin-top: -0.75rem;
+  height: 50px;
+}
+.main__navigation{
+  justify-content: space-between;
+  margin: 0rem;
+}
 
 //aside
 
@@ -48,4 +56,5 @@
 }
 .aside__button{
   color:$white!important;
+  margin-bottom: 1rem;
 }
