@@ -13,7 +13,7 @@ const {h1,title,meta_keywords,meta_description}=page_meta
 const isDev = process.env.NODE_ENV === 'development'
 const isProd = !isDev
 const src=path.resolve(__dirname, 'src')
-const build=path.resolve(__dirname, 'dist')
+const build=path.resolve(__dirname, 'docs')
 
 const optimization = () => {
     const config = {

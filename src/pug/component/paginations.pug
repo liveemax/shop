@@ -2,11 +2,10 @@ include arrowBottom
 nav(role=navigator).pagination
     ul.pagination-list
         li
-            a.pagination-previous
+            a.pagination-previous.pagination__item
                 +icon
-            a.pagination-link 1
-        li
-            a.pagination-link.is-current 2
-            a.pagination-next
+            a.pagination-link.pagination__item 1
+            a.pagination-link.is-current.pagination__item 2
+            a(disabled).pagination-next.pagination__item
                 +icon
 include sortBy

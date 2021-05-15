@@ -1,5 +1,6 @@
 - var reserve="truck"
 include tag
+include euro
 mixin item(val)
     a(href=val["href"]||"#").items
         div.box.columns.item__container
@@ -8,7 +9,9 @@ mixin item(val)
             div.column
                 div.item__header.columns
                     h3.column.is-9.heading_level3=val["title"]||reserve
-                    span.item__price.is-2.column=`${val["price_currency"]||reserve}  ${val["price"]||reserve}`
+                    if(val["price_currency"]||reserve==="EUR")
+                        +euro
+                    span.item__price.is-2.column=`${val["price"]||reserve}`
                 p.description='Item Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quis distinctio, officia tenetur a eaque deleniti, impedit accusamus, alias provident sint id odio neque laudantium! Saepe quisquam libero soluta itaque? '
                 div.item__tag
                     +tag(val["year"]||reserve)

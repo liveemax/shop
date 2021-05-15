@@ -3,7 +3,7 @@
 mixin link(val)
     a(href=val["href"]).navbar-item.link= val["text"]||reserve
 nav(role="navigation" aria-label="main navigation").navbar
-    div.navbar
+    div.navbar__padding
         div.navbar-burger.activeListener
             span
             span
