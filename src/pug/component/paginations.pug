@@ -1,9 +1,12 @@
+include arrowBottom
 nav(role=navigator).pagination
     ul.pagination-list
         li
-            a(disabled).pagination-previous
+            a.pagination-previous
+                +icon
             a.pagination-link 1
         li
             a.pagination-link.is-current 2
-            a.pagination-next Next page
+            a.pagination-next
+                +icon
 include sortBy

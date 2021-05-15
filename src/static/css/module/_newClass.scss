@@ -50,6 +50,10 @@ margin-top: 1.5rem;
     margin: 0.5rem 0!important;
   }
 }
+.aside__param{
+  justify-content: space-between!important;
+  display: flex!important;
+}
 .aside__minmax{
   display: flex;
   justify-content: space-between;
@@ -63,6 +67,7 @@ margin-top: 1.5rem;
 }
 
 //Items
+
 .item__container{
   position: relative;
   margin: 0.5rem 0!important;
@@ -84,16 +89,47 @@ margin-top: 1.5rem;
   bottom: 0;
   transform: translate(0,-50%);
 }
+
 //Tag
+
 .tag{
   background-color: $disable;
   margin: 0 0.25rem;
   color: $white;
 }
+
 //Footer
+
 .footer{
   margin-top: 1.5rem;
 }
-.footer__item{
-  align-self: center;
+.footer__items{
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
 }
+.footer__location__item{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+
+//sort by
+.sort__by{
+  color:#000;
+}
+.sort__by__header{
+  position: relative;
+  button{
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.sort__by__header__item{
+  position: absolute;
+  left: -100px;
+  top: 50%;
+  transform: translate(0,-50%);
+}
+

@@ -40,7 +40,16 @@ $body-background-color: $bg;
     }
   }
 }
-
+.pagination-previous{
+  svg{
+    transform: rotate(90deg);
+  }
+}
+.pagination-next{
+  svg{
+    transform: rotate(270deg);
+  }
+}
 
 
 

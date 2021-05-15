@@ -1,16 +1,30 @@
 div.footer__items.columns
-    div.footer__item.column.is-4
-        div.footer__logo
-            h3.heading_level3 Logo / Company Name
-        div.footer__location
-            span Company Adress: Lorem ipsum dolor sit amet 18600, Netherlands
-        div.footer__phone
-            span +38 958 755-00-00
-        div.footer__contact
-            include facebook
-            include insta
-            include twit
-            include youtube
+    div.footer__logo.column.is-12
+        h3.heading_level3 Logo / Company Name
+    div.footer__item.column.is-3
+        div.footer__location.columns
+            div.column.is-2.footer__location__item
+                span.icon.is-small
+                    i.fas.fa-map-marker-alt.fa-2x
+            div.column
+                span Company Adress: Lorem ipsum dolor sit amet
+                div
+                    span 18600, Netherlands
+        div.footer__phone.columns
+            div.column.is-2
+                span.icon.is-small
+                    i.fas.fa-phone
+            div.column
+                span +38 958 755-00-00
+        div.footer__icons.columns
+            div.column.is-3
+                include facebook
+            div.column.is-3
+                include insta
+            div.column.is-3
+                include twit
+            div.column.is-3
+                include youtube
     div.footer__item.column
         div.footer__text
             p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet quos ullam atque accusantium ratione molestias soluta, provident nobis, assumenda dolorum voluptas incidunt inventore quia reiciendis quis. Quis quo molestias repellat.
